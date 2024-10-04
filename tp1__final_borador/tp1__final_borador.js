@@ -1,7 +1,6 @@
 let pantalla;
 let imagenes = [];
 let total= 5;
-let sigue;
 
 function preload() {
   for (let i=0; i< total; i++) {
@@ -12,7 +11,6 @@ function preload() {
 function setup() {
   createCanvas(640, 480);
   pantalla = 0;
-  sigue = pantalla;
 }
 
 function draw() {
@@ -35,15 +33,13 @@ function draw() {
   } else if (pantalla === 4) {
     text("CINCO", width/2, height/2);
   }
-  print(mouseX + '/' + mouseY);
 }
 
 
 function mousePressed() {
-
   if (pantalla < 2) {
     pantalla++;
-  }
+    }
   if (pantalla === 2) {
     if (mouseX > 130 && mouseX < 130+ancho && mouseY > 250 && mouseY < 250+alto) {
       pantalla= 3;
