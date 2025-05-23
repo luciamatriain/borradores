@@ -9,6 +9,7 @@ Cambiar el z-index o display para que se vea el feedback en lugar del formulario
 js
 Copiar
 Editar
+
 // Variables
 var input_nombre = document.getElementById("nombre");
 var input_pronombre = document.getElementById("pronombre");
