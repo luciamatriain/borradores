@@ -1,0 +1,57 @@
+🧠 ¿Qué necesitamos hacer?
+Seleccionar los dos contenedores: el del formulario (.contenedor-form1) y el de feedback (.feedback).
+
+Insertar el contenido dinámico en .feedback.
+
+Cambiar el z-index o display para que se vea el feedback en lugar del formulario.
+
+✅ Modificá tu formulario.js así:
+js
+Copiar
+Editar
+// Variables
+var input_nombre = document.getElementById("nombre");
+var input_pronombre = document.getElementById("pronombre");
+var input_mail = document.getElementById("mail");
+var input_submit = document.getElementById("boton-enviar");
+
+var contenedorForm = document.querySelector(".contenedor-form1");
+var contenedorFeedback = document.querySelector(".feedback");
+
+input_submit.addEventListener("click", enviarFormulario);
+
+function enviarFormulario(event) {
+  event.preventDefault();
+
+  // Obtener valores
+  var valor_nombre = input_nombre.value;
+  var valor_pronombre = input_pronombre.value;
+  var valor_mail = input_mail.value;
+
+  // Cambiar contenido del feedback
+  contenedorFeedback.innerHTML = `
+    <h2>¡Gracias por sumarte, ${valor_nombre}!</h2>
+    <p>Te hablaremos como <strong>${valor_pronombre}</strong>.</p>
+    <p>Revisá tu casilla de correo: <strong>${valor_mail}</strong></p>
+  `;
+
+  // Ocultar formulario y mostrar feedback
+  contenedorForm.style.display = "none";
+  contenedorFeedback.style.zIndex = "2"; // Por encima del formulario
+}
+🖌️ Opcional: Mejorá el CSS del .feedback
+Ya que ahora se muestra, podrías agregar algo como esto:
+
+css
+Copiar
+Editar
+.feedback h2 {
+  color: #EF5B24;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.feedback p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
