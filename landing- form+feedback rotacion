@@ -6,10 +6,6 @@ Insertar el contenido dinámico en .feedback.
 Cambiar el z-index o display para que se vea el feedback en lugar del formulario.
 
 ✅ Modificá tu formulario.js así:
-js
-Copiar
-Editar
-
 // Variables
 var input_nombre = document.getElementById("nombre");
 var input_pronombre = document.getElementById("pronombre");
@@ -56,3 +52,126 @@ Editar
   font-size: 1.2em;
   line-height: 1.5;
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+🧩 1. AGREGÁ ESTA SECCIÓN AL FINAL DE TU estilos.css
+/* ===================== RESPONSIVE DESIGN ===================== */
+
+/* Pantallas pequeñas: celulares */
+@media (max-width: 767px) {
+
+  /* Ajustes generales */
+  body {
+    font-size: 90%;
+    overflow-x: hidden;
+  }
+
+  .contenido {
+    width: 90%;
+    padding: 0 1rem;
+  }
+
+  /* Portada */
+  .contenido-portada h1 {
+    font-size: 2.4rem;
+    margin-top: 2rem;
+  }
+
+  .contenido-portada p {
+    font-size: 1.2rem;
+  }
+
+  #boton {
+    font-size: 1.2rem;
+    padding: 0.7rem 1rem;
+  }
+
+  /* CTA */
+  .contenedor-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-cta {
+    width: 80%;
+  }
+
+  /* Carrusel */
+  .carrusel-bootstrap {
+    margin-top: 2rem;
+  }
+
+  /* Cards */
+  .contenedor-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flip-card {
+    width: 90% !important;
+    height: auto !important;
+    margin: 1rem 0 !important;
+  }
+
+  /* Formulario */
+  .contenedor-form,
+  .feedback {
+    width: 90%;
+    height: auto;
+    margin: 2rem auto;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  label {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #boton-enviar {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .texto-spoiler {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  #imagen-hongo {
+    position: static;
+    transform: none;
+    width: 60%;
+    margin: 2rem auto;
+    display: block;
+  }
+
+  /* Footer */
+  footer {
+    height: auto;
+    padding: 2rem 0;
+    text-align: center;
+  }
+}
+
+🧭 2. ¿Cómo seguir?
+Probalo en el navegador: achicá la ventana y revisá los cambios.
+
+Ajustá lo necesario desde Figma Mobile: usá las medidas reales para pulir lo visual.
+
+Probalo en el celular real, no solo en el navegador.
+
+Si querés, podés crear un archivo nuevo responsive.css y vincularlo al final con:
+
+html
+Copiar
+Editar
+<link rel="stylesheet" href="responsive.css" />
+Cuando lo tengas aplicado y probado, podés traerme el nuevo código o dudas específicas, y revisamos juntos cómo quedó y qué más ajustar. ¿Querés que lo separemos en un archivo nuevo o preferís integrarlo dentro de estilos.css por ahora?
+
